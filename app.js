@@ -70,7 +70,7 @@ passport.deserializeUser(function(user, cb) {
 passport.use(new GoogleStrategy({
   clientID: process.env.CLIENT_ID,
   clientSecret: process.env.CLIENT_SECRET,
-  callbackURL: "http://localhost:3000/auth/google/secrets",
+  callbackURL: "https://secrets-8m84.onrender.com/secrets",
   userProfileURL: "https://www.googleapis.com/oauth2/v3/userinfo"
 },
 function(accessToken, refreshToken, profile, cb) {
@@ -84,7 +84,7 @@ function(accessToken, refreshToken, profile, cb) {
 passport.use(new GitHubStrategy({
   clientID: process.env.GITHUB_CLIENT_ID,
   clientSecret: process.env.GITHUB_CLIENT_SECRET,
-  callbackURL: "http://localhost:3000/auth/github/secrets"
+  callbackURL: "https://secrets-8m84.onrender.com/auth/github/secrets"
 },
 function(accessToken, refreshToken, profile, cb) {
   console.log(profile)
